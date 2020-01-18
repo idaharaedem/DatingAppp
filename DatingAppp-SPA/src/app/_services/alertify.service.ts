@@ -18,7 +18,7 @@ alertify.confirm(message, (e: any) => {
 }
 
 success(message: string) {
-alertify.success(message);
+  alertify.success(message);
 }
 
 error(message: string) {
@@ -26,7 +26,7 @@ error(message: string) {
 }
 
 warning(message: string) {
-    alertify.warning(message);
+  alertify.warning(message);
 }
 
 message(message: string) {
