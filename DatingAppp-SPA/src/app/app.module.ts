@@ -11,7 +11,7 @@ import { AuthService } from './_services/auth.service';
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
 import { ErrorInterceptorProvider } from './_services/error.interceptor';
-import { BsDropdownModule, TabsModule, BsDatepickerModule } from 'ngx-bootstrap';
+import { BsDropdownModule, TabsModule, BsDatepickerModule, PaginationModule, ButtonsModule } from 'ngx-bootstrap';
 import { MemberListComponent } from './members/member-list/member-list.component';
 import { ListsComponent } from './lists/lists.component';
 import { MessagesComponent } from './messages/messages.component';
@@ -28,6 +28,7 @@ import { PreventUnsavedChanges } from './_guards/prevent-unsaved-changes.guard';
 import { PhotoEditorComponent } from './members/member-list/photo-editor/photo-editor.component';
 import { FileUploadModule } from 'ng2-file-upload';
 import {TimeAgoPipe} from 'time-ago-pipe';
+import { Button } from 'protractor';
 
 
 
@@ -66,8 +67,10 @@ export class CustomHammerConfig extends HammerGestureConfig {
       FileUploadModule,
       NgxGalleryModule,
       ReactiveFormsModule,
+      ButtonsModule.forRoot(),
       TabsModule.forRoot(),
       BsDatepickerModule.forRoot(),
+      PaginationModule.forRoot(),
       BsDropdownModule.forRoot(),
       RouterModule.forRoot(appRoutes),
       JwtModule.forRoot({
