@@ -29,6 +29,7 @@ import { PhotoEditorComponent } from './members/member-list/photo-editor/photo-e
 import { FileUploadModule } from 'ng2-file-upload';
 import {TimeAgoPipe} from 'time-ago-pipe';
 import { Button } from 'protractor';
+import { ListsResolver } from './_resolvers/lists.resolver';
 
 
 
@@ -86,6 +87,7 @@ export class CustomHammerConfig extends HammerGestureConfig {
       ErrorInterceptorProvider,
       MemberDetailResolver,
       MemberListResolver,
+      ListsResolver,
       MemberEditResolver,
       { provide: HAMMER_GESTURE_CONFIG, useClass: CustomHammerConfig}
 
