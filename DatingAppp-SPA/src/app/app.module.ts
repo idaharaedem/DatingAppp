@@ -30,6 +30,10 @@ import { FileUploadModule } from 'ng2-file-upload';
 import {TimeAgoPipe} from 'time-ago-pipe';
 import { Button } from 'protractor';
 import { ListsResolver } from './_resolvers/lists.resolver';
+import { MessagesResolver } from './_resolvers/messages.resolver';
+import { MemberMessagesComponent } from './members/member-list/member-messages/member-messages.component';
+
+
 
 
 
@@ -56,6 +60,7 @@ export class CustomHammerConfig extends HammerGestureConfig {
       MemberCardComponent,
       MemberDetailComponent,
       MemberEditComponent,
+      MemberMessagesComponent,
       PhotoEditorComponent,
       TimeAgoPipe
 
@@ -84,6 +89,7 @@ export class CustomHammerConfig extends HammerGestureConfig {
    providers: [
       AuthService,
       PreventUnsavedChanges,
+      MessagesResolver,
       ErrorInterceptorProvider,
       MemberDetailResolver,
       MemberListResolver,
